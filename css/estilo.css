@@ -22,10 +22,28 @@ body * {
   line-height: 160%;
 }
 
+header div {
+  width: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  margin-top: 32px;
+  padding: 4px;
+  border-radius: 50%;
+  background-image: -webkit-gradient(linear, left top, right top, from(#9572fc), color-stop(50.52%, #43e7ad), to(#e2d45c));
+  background-image: linear-gradient(90deg, #9572fc 0%, #43e7ad 50.52%, #e2d45c 100%);
+}
+
+header div img {
+  width: 100%;
+  border-radius: 50%;
+}
+
 main {
   max-width: 580px;
   width: 90%;
-  margin: auto;
+  margin: 32px auto;
   display: -ms-grid;
   display: grid;
   gap: 24px;
@@ -62,6 +80,8 @@ main section div ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 16px;
   margin-top: 24px;
 }
@@ -73,6 +93,7 @@ main section div .games-list img {
 
 main section div .channel-list img {
   border-radius: 50%;
-  width: 70%;
+  width: 70px;
+  border: 1px solid #443e54;
 }
 /*# sourceMappingURL=estilo.css.map */

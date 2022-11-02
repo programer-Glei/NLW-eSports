@@ -22,10 +22,28 @@ body *{
     line-height: 160%;
 }
 
+header{
+    
+    div{
+        width: 120px;
+        display: flex;
+        margin: 0 auto;
+        margin-top: 32px;
+        padding: 4px;
+        border-radius: 50%;
+        background-image: linear-gradient(90deg,#9572fc 0%, #43e7ad 50.52%, #e2d45c 100%);
+
+        img{
+            width: 100%;
+            border-radius: 50%;
+        }
+    }
+}
+
 main{
     max-width: 580px;
     width: 90%;
-    margin: auto;
+    margin: 32px auto;
     display: grid;
     gap: 24px;
 
@@ -54,6 +72,7 @@ main{
     
             ul{
                 display: flex;
+                flex-wrap: wrap;
                 gap: 16px;
                 margin-top: 24px;
             }
@@ -68,7 +87,8 @@ main{
             .channel-list{
                 img{
                     border-radius: 50%;
-                    width: 70%;
+                    width: 70px;
+                    border: 1px solid #443e54;
                 }
             }
         }

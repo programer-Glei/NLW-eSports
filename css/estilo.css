@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  list-style: none;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-image: url(../img/bg.jpg);
+  background-position: top center;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-color: #121214;
+}
+
+body * {
+  font-family: 'Inter', sans-serif;
+  line-height: 160%;
+}
+
+main {
+  max-width: 580px;
+  width: 90%;
+  margin: auto;
+  display: -ms-grid;
+  display: grid;
+  gap: 24px;
+}
+
+main section {
+  color: white;
+  background-image: -webkit-gradient(linear, left top, right top, from(#9572fc), color-stop(50.52%, #43e7ad), to(#e2d45c));
+  background-image: linear-gradient(90deg, #9572fc 0%, #43e7ad 50.52%, #e2d45c 100%);
+  border-radius: 10px;
+  padding-top: 4px;
+}
+
+main section div {
+  background-color: #2a2634;
+  padding: 24px 32px;
+  border-radius: 8px;
+}
+
+main section div h1 {
+  font-weight: 900;
+  font-size: 24px;
+  letter-spacing: -0.47px;
+}
+
+main section div p {
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: -0.18px;
+  color: #a1a1aa;
+}
+
+main section div ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+main section div .games-list img {
+  width: 90px;
+  border-radius: 8px;
+}
+
+main section div .channel-list img {
+  border-radius: 50%;
+  width: 70%;
+}
+/*# sourceMappingURL=estilo.css.map */

@@ -23,7 +23,7 @@ body *{
 }
 
 header{
-    
+    height: 120px;
     div{
         width: 120px;
         display: flex;
@@ -32,6 +32,12 @@ header{
         padding: 4px;
         border-radius: 50%;
         background-image: linear-gradient(90deg,#9572fc 0%, #43e7ad 50.52%, #e2d45c 100%);
+        transition: transform 0.3s;
+        animation: top 0.7s 0.2s backwards;
+
+        &:hover{
+            transform: scale(1.1);
+        }
 
         img{
             width: 100%;
@@ -52,6 +58,17 @@ main{
         background-image: linear-gradient(90deg,#9572fc 0%, #43e7ad 50.52%, #e2d45c 100%);
         border-radius: 10px;
         padding-top: 4px;
+        animation: bottom 0.7s backwards;
+
+        &:nth-child(2){
+            animation-name: left;
+            animation-delay: 0.4s;
+        }
+
+        &:nth-child(3){
+            animation-name: right;
+            animation-delay: 0.8s;
+        }
 
         div{
             background-color: #2a2634;
@@ -75,6 +92,14 @@ main{
                 flex-wrap: wrap;
                 gap: 16px;
                 margin-top: 24px;
+
+                li{
+                    transition: transform 0.3s;
+
+                    &:hover{
+                        transform: scale(1.1);
+                    }
+                }
             }
     
             .games-list{
@@ -92,5 +117,55 @@ main{
                 }
             }
         }
+    }
+}
+
+/* animation */
+
+@keyframes top{
+    from{
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bottom{
+    from{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes left{
+    from{
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes right{
+    from{
+        opacity: 0;
+        transform: translateX(30px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0);
     }
 }

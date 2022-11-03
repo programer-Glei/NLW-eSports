@@ -22,6 +22,10 @@ body * {
   line-height: 160%;
 }
 
+header {
+  height: 120px;
+}
+
 header div {
   width: 120px;
   display: -webkit-box;
@@ -33,6 +37,17 @@ header div {
   border-radius: 50%;
   background-image: -webkit-gradient(linear, left top, right top, from(#9572fc), color-stop(50.52%, #43e7ad), to(#e2d45c));
   background-image: linear-gradient(90deg, #9572fc 0%, #43e7ad 50.52%, #e2d45c 100%);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+  -webkit-animation: top 0.7s 0.2s backwards;
+          animation: top 0.7s 0.2s backwards;
+}
+
+header div:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 header div img {
@@ -55,6 +70,22 @@ main section {
   background-image: linear-gradient(90deg, #9572fc 0%, #43e7ad 50.52%, #e2d45c 100%);
   border-radius: 10px;
   padding-top: 4px;
+  -webkit-animation: bottom 0.7s backwards;
+          animation: bottom 0.7s backwards;
+}
+
+main section:nth-child(2) {
+  -webkit-animation-name: left;
+          animation-name: left;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+main section:nth-child(3) {
+  -webkit-animation-name: right;
+          animation-name: right;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
 }
 
 main section div {
@@ -86,6 +117,18 @@ main section div ul {
   margin-top: 24px;
 }
 
+main section div ul li {
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+main section div ul li:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
 main section div .games-list img {
   width: 90px;
   border-radius: 8px;
@@ -95,5 +138,109 @@ main section div .channel-list img {
   border-radius: 50%;
   width: 70px;
   border: 1px solid #443e54;
+}
+
+/* animation */
+@-webkit-keyframes top {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@keyframes top {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes bottom {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes bottom {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes left {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(-30px);
+            transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes left {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(-30px);
+            transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes right {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(30px);
+            transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes right {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(30px);
+            transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
 }
 /*# sourceMappingURL=estilo.css.map */
